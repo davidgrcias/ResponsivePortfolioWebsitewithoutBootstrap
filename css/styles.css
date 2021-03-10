@@ -6,7 +6,6 @@
 
 html{
   scroll-behavior: smooth;
-  transition: scroll-behavior 2s;
 }
 
 body{
@@ -14,6 +13,55 @@ body{
   min-height: 1500px;
 }
 /* body end */
+
+/* dropdown */
+
+ul .dropdown{
+  color: #DCDCDC;
+  position: relative;
+  line-height: 50px;
+}
+ul .dropdown:hover{
+  color: white;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+ul .dropdown ul{
+  display: none;
+}
+ul .dropdown:hover ul{
+  display: block;
+  position: absolute;
+  top: 99.1%;
+  left: 0px;
+  width: 130px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+ul .dropdown ul li{
+  line-height: 20px;
+  text-align: center;
+  padding: 10px;
+  background: #212523;
+  margin-top: -10px;
+}
+ul .dropdown ul li a{
+  color: #eaeaea;
+  text-decoration: none;
+}
+ul .dropdown ul li a span{
+  display: block;
+  padding: 0px;
+  border-bottom: 2px solid #eaeaea;
+  margin-left: -10px;
+  width: 150px;
+}
+ul .dropdown ul li a:hover{
+  color: white;
+  transition: color 0.5s;
+}
+
+/* dropdown end */
 
 /* navigation bar */
 
@@ -32,25 +80,31 @@ nav{
 nav ul{
   display: flex;
   list-style: none;
-  width: 37%;
+  width: 43%;
   justify-content: space-between;
 }
 
-nav a{
+nav a.page-scroll{
   color: #DCDCDC;
   text-decoration: none;
+  line-height: 50px;
 }
 
-nav a:hover{
+nav a.page-scroll:hover{
   color: white;
   transition: color 0.5s;
 }
 
-nav h4{
+nav h4 a{
+  text-decoration: none;
   color: #DCDCDC;
   font-size: 24px;
   letter-spacing: 4px;
-  cursor: pointer;
+}
+
+nav h4 a:hover{
+  color: white;
+  transition: color 0.5s;
 }
 
 .menu-toggle{
@@ -113,13 +167,12 @@ nav h4{
 
 
 /* jumbotron */
-.jumbotron{
+  .jumbotron{
   background: #eee;
   position: relative;
   padding-top: 80px;
   padding-bottom: 30px;
-}
-
+  }
   .jumbotron img{
     display: block;
     border-radius: 50%;
@@ -128,6 +181,10 @@ nav h4{
     border: 5px solid gray;
     margin-left: auto;
     margin-right: auto;
+    transition: 2s;
+  }
+  .jumbotron img:hover{
+    border: 5px solid #eaeaea;
   }
   .jumbotron h1{
     margin-top: 20px;
@@ -243,11 +300,11 @@ nav h4{
   }
   .portfolio .box{
     display: block;
-    padding: 2px;
+    padding: 1px;
     color: #333;
     text-decoration: none;
     text-align: center;
-    max-width: 310px;
+    max-width: 302px;
     position: relative;
     background: white;
     margin: 30px;
@@ -269,13 +326,13 @@ nav h4{
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1050px){
   nav ul{
-    width: 50%;
+    width: 60%;
   }
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 1000px){
   nav ul{
     position: absolute;
     right: 0;
@@ -299,10 +356,13 @@ nav h4{
   .about p{
     margin-bottom: 40px;
   }
+  ul .dropdown{
+    display: none;
+  }
 }
 @media screen and (max-width: 500px){
   nav ul{
-    width: 35%;
+    width: 36%;
   }
 }
 /* responsive end */
