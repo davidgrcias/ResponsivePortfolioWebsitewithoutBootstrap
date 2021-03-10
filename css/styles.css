@@ -288,6 +288,50 @@ nav h4 a:hover{
 }
 /* portfolio end */
 
+/* contact  */
+.contact{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.contact h1{
+  text-align: center;
+  font-weight: 200;
+  font-size: 40px;
+  color: #222;
+}
+.contact hr{
+  width: 250px;
+  border-bottom: 2px solid gray;
+  margin: 15px auto;
+}
+.contact .form-group{
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+.contact label{
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+.contact input{
+  width: 100%;
+  height: 25px;
+  border: 1px solid #DCDCDC;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 20px;
+  font-family: 'Times New Roman', sans-serif, monospace;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+.contact input:focus{
+  border: 1px solid #333;
+  box-shadow: 0px 0px 10px lightskyblue;
+}
+/* about end */
+
 
 /* Responsive */
 
